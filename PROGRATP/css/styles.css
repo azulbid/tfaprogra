@@ -31,10 +31,28 @@ p {
     flex-direction: row;
     flex-wrap: nowrap;
     padding: 10px;
-  
+    overflow: scroll;
 }
 
 .fav {
+    margin: 15px;
+    padding: 15px;
+    width: 100px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.containergen{
+    background-color: rgba(12, 12, 12, 0.787);
+    display: flex;
+    box-sizing: 500%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 10px;
+    overflow: scroll;
+}
+
+.genero {
     margin: 15px;
     padding: 15px;
     width: 100px;
@@ -81,6 +99,7 @@ p {
     align-self: center;
     flex-wrap: nowrap;
     }
+
 .cinco {
     width: 500px;
     height: 350px;
@@ -98,8 +117,7 @@ p {
     height: 250;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-        
+    flex-direction: column; 
     }
 
     body {
@@ -124,15 +142,6 @@ p {
         color: aliceblue;
     }
     
-    .container {
-    background-color: rgba(12, 12, 12, 0.787);
-    display: flex;
-    box-sizing: 500%;
-    flex-direction: row;
-    padding: 10px;
-      
-    }
-    
     .genero {
         margin: 15px;
         padding: 15px;
@@ -141,68 +150,31 @@ p {
         align-items: center;
     }
     
-    .uno {
-        width: 500px;
-        height: 350px;
-        margin-right: 20px;
-        margin-left: 20;
-        order: 1;
-        align-self: center;
-        flex-wrap: nowrap;
-        }
-    
-    .dos {
-        width: 500px;
-        height: 350px;
-        margin-right: 20px;
-        margin-left: 20;
-        order: 2;
-        align-self: center;
-        flex-wrap: nowrap;
-        }
-        
-    .tres {
-        width: 500px;
-        height: 350px;
-        margin-right: 20px;
-        margin-left: 20;
-        order: 3;
-        align-self: center;
-        flex-wrap: nowrap;
-        }
-    
-    .cuatro {
-        width: 500px;
-        height: 350px;
-        margin-right: 20px;
-        margin-left: 20;
-        order: 4;
-        align-self: center;
-        flex-wrap: nowrap;
-        }
-    .cinco {
-        width: 500px;
-        height: 350px;
-        margin-right: 20px;
-        margin-left: 20;
-        order: 5;
-        align-self: center;
-        flex-wrap: nowrap;
-        }
-    
-    img
+    .foto
     {
         width: 500px;
         height: 350px;
+        padding: 100;
+        width: 300;
+        height: 250;
         margin-right: 20px;
         margin-left: 20px;
+        justify-content: center;
+        align-items: center;
+        flex-direction:column; 
     }
+   
     
     .terror
     {
         order: 1;
         align-self: center;
         flex-wrap: nowrap;
+        width: 500px;
+        height: 350px;
+        margin-right: 20px;
+        margin-left: 20;
+        align-self: center;
     }
     
     .romance
@@ -210,6 +182,11 @@ p {
         order: 2;
         align-self: center;
         flex-wrap: nowrap;
+        width: 500px;
+        height: 350px;
+        margin-right: 20px;
+        margin-left: 20;
+        align-self: center;
     }
     
     .comedia
