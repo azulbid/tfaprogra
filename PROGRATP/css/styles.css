@@ -233,3 +233,47 @@ p {
         flex-wrap: nowrap;
     }
     
+    #detail movie
+    body{
+        background-color: rgb(5, 5, 5);
+        color: white;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        
+    }
+    
+    .container{
+        background-color: rgb(116, 3, 3);
+        font-size: 50px;
+        
+    }
+    
+    article{
+        height: 300px;
+    }
+    
+    article .titular{
+        padding-bottom: 0px;
+    }
+    
+    
+    .titular img{ 
+        width: 300px;
+        height: 300px;
+        
+    }
+    
+    .titulos{
+       display:inline-block;
+       margin-block-start: 0em;
+        margin-block-end: 0em;
+        width: 50%;
+    }
+    
+    
+    
+    
+    article .lista{
+        padding: 0%;
+        height: 0px;
+        
+    }
