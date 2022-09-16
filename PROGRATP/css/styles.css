@@ -5,6 +5,31 @@
     align-items: center;
 }
 
+.titulo_ppl {
+    color:aliceblue;
+    font-size: 20px;
+    margin-top: 50px;
+    margin-left: 10px;
+}
+
+.peliculas_populares {
+    display: flex;
+    scroll-snap-type: mandatory;
+    overflow: scroll;
+}
+
+.series_populares {
+    display: flex;
+    scroll-snap-type: mandatory;
+    overflow: scroll;
+}
+
+.vistohoy {
+    display: flex;
+    scroll-snap-type: mandatory;
+    overflow: scroll;
+}
+
 body {
     background-color: #000000;
     margin: 0px;
