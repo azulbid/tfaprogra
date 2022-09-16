@@ -31,9 +31,6 @@ h1 {
 h2 {
     color: aliceblue;
     text-align: center;
-    border-style: solid;
-    border-width: 1px;
-    border-color: red;
     padding: 8px;
 }
 
@@ -77,6 +74,8 @@ p {
 
 .fav {
     margin: 15px;
+    margin-right: 10px;
+    margin-left: 10px;
     padding: 15px;
     width: 100px;
     justify-content: space-between;
@@ -104,8 +103,8 @@ p {
 .uno {
     width: 500px;
     height: 350px;
-    margin-right: 20px;
-    margin-left: 20;
+    margin-right: 10px;
+    margin-left: 10px;
     order: 1;
     align-self: center;
     flex-wrap: nowrap;
@@ -114,8 +113,8 @@ p {
 .dos {
     width: 500px;
     height: 350px;
-    margin-right: 20px;
-    margin-left: 20;
+    margin-right: 10px;
+    margin-left: 10px;
     order: 2;
     align-self: center;
     flex-wrap: nowrap;
@@ -124,8 +123,8 @@ p {
 .tres {
     width: 500px;
     height: 350px;
-    margin-right: 20px;
-    margin-left: 20;
+    margin-right: 10px;
+    margin-left: 10px;
     order: 3;
     align-self: center;
     flex-wrap: nowrap;
@@ -134,8 +133,8 @@ p {
 .cuatro {
     width: 500px;
     height: 350px;
-    margin-right: 20px;
-    margin-left: 20;
+    margin-right: 10px;
+    margin-left: 10px;
     order: 4;
     align-self: center;
     flex-wrap: nowrap;
@@ -144,8 +143,8 @@ p {
 .cinco {
     width: 500px;
     height: 350px;
-    margin-right: 20px;
-    margin-left: 20;
+    margin-right: 10px;
+    margin-left: 10px;
     order: 5;
     align-self: center;
     flex-wrap: nowrap;
@@ -163,16 +162,15 @@ p {
     
     
 .foto {
-    width: 200;
-    height: 200;
+    width: 250px;
+    height: 380px;
     padding: 100;
-    width: 300;
-    height: 250;
-    margin-right: 20px;
-    margin-left: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
     justify-content: center;
     align-items: center;
     flex-direction:column;
+    object-fit: cover;
     }
    
     
@@ -242,8 +240,8 @@ article .titular{
     
     
 .titular img { 
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 5   00px;
         
     }
     
@@ -255,10 +253,6 @@ article .titular{
     }
     
     
-article.lista{
-    padding: 0%;
-    height: 0px;
-    }
 
 .detpeligen {
     color: aliceblue;
@@ -274,4 +268,51 @@ article.lista{
     color: aliceblue;
 }
 
+.favoritos{
+    text-align: right;
+}
+
+.sinopsis{
+    text-align: center;
     
+}
+article.lista{
+    padding: 0%;
+    height: 0px;
+    color: aliceblue;
+    text-align: left;
+    
+    }
+
+a{
+    text-decoration: none;
+    color: aliceblue;
+}
+.premios{
+    text-align: center;
+}
+ 
+.titulo_ppl {
+    color:aliceblue;
+    font-size: 20px;
+    margin-top: 50px;
+    margin-left: 10px;
+}
+
+.peliculas_populares {
+    display: flex;
+    scroll-snap-type: mandatory;
+    overflow: scroll;
+}
+
+.series_populares {
+    display: flex;
+    scroll-snap-type: mandatory;
+    overflow: scroll;
+}
+
+.vistohoy {
+    display: flex;
+    scroll-snap-type: mandatory;
+    overflow: scroll;
+}
