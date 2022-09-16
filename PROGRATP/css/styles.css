@@ -211,7 +211,7 @@ article .titular{
     
 .titular img { 
     width: 400px;
-    height: 400px;
+    height: 5   00px;
         
     }
     
@@ -223,11 +223,6 @@ article .titular{
     }
     
     
-article.lista{
-    padding: 0%;
-    height: 0px;
-    color: aliceblue;
-    }
 
 .detpeligen {
     color: aliceblue;
@@ -251,4 +246,19 @@ article.lista{
     text-align: center;
     
 }
+article.lista{
+    padding: 0%;
+    height: 0px;
+    color: aliceblue;
+    text-align: left;
+    
+    }
 
+a{
+    text-decoration: none;
+    color: aliceblue;
+}
+.premios{
+    text-align: center;
+}
+ 
