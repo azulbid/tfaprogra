@@ -346,6 +346,7 @@ a{
     outline: none;
     border: #000000;
     border-radius: 30px;
+    transition: all 0.6s ease;
 }
 .lupa{
     position: absolute;
@@ -369,4 +370,5 @@ a{
     text-align: center;
     color: white;
     border-radius: 50%;
+    cursor: pointer;
 }
