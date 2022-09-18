@@ -324,3 +324,49 @@ a{
     scroll-snap-type: mandatory;
     overflow: scroll;
 }
+
+.barra-body{
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: aqua;
+}
+.barra{
+    position: absolute;
+    padding: 5px;
+}
+.barra input{
+    width: 240px;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 18px;
+    color: #000000;
+    outline: none;
+    border: #000000;
+    border-radius: 30px;
+}
+.lupa{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #440080;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    border-radius: 50%;
+}
+.lupa-icon{
+    top: 0;
+    right: 0;
+    background: #440080;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    color: white;
+    border-radius: 50%;
+}
