@@ -325,14 +325,7 @@ a{
     overflow: scroll;
 }
 
-.barra-body{
-    font-family: 'Courier New', Courier, monospace;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: aqua;
-}
+
 .barra{
     position: absolute;
     padding: 5px;
