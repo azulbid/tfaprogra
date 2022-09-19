@@ -9,8 +9,19 @@ header {
     width: 100%;
     height: 160px;
     display: flex;
-    background-color: #101010;
+    background-color: #560458;
     top: 0;
+    justify-content: center;
+}
+
+.titulogo {
+    display: flex;
+}
+
+.logo {
+    height: 140px;
+    margin-left: -250px;
+
 }
 
 nav {
@@ -20,12 +31,75 @@ nav {
 
 .list_nav {
     display: flex;
+    align-items: center;
+    margin-top: 60px;
+    list-style: none;
 }
 
 
 h1 {
+    display: flex;
     color: aliceblue;
-    margin-top: 0;
+    margin-top: 80px;
+    margin-left: -30px;
+    text-align: center;
+}
+
+.buscador {
+    display: flex;
+    margin-top: 44px;
+    height: 25px;
+    position: relative;
+}
+
+#buscarterm.buscador {
+    display: flex;
+    align-items: center;
+    height: 25px;
+}
+
+.barra{
+    position: absolute;
+    padding: 5px;
+    
+}
+
+.barra input{
+    width: 240px;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 18px;
+    color: #000000;
+    outline: none;
+    border: #000000;
+    border-radius: 30px;
+    transition: all 0.6s ease;
+}
+
+.lupa{
+    position: relative;
+    top: 0;
+    right: 0;
+    background: #440080;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    border-radius: 50%;
+}
+
+.lupa-icon{
+    top: 0;
+    right: 0;
+    background: #440080;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 h2 {
@@ -325,43 +399,20 @@ a{
     overflow: scroll;
 }
 
+.foot {
+    display: flex;
+    width: 100%;
+    height: 180px;
+    background-color: #560458;
+    margin-top: 240px;
+}
 
-.barra{
-    position: absolute;
-    padding: 5px;
+.li_foot {
+    display: inline;
+    justify-content: space-between;
+    padding: 50px;
+    margin-left: 300px;
 }
-.barra input{
-    width: 240px;
-    height: 40px;
-    padding: 0 20px;
-    font-size: 18px;
-    color: #000000;
-    outline: none;
-    border: #000000;
-    border-radius: 30px;
-    transition: all 0.6s ease;
-}
-.lupa{
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: #440080;
-    width: 55px;
-    height: 55px;
-    line-height: 55px;
-    text-align: center;
-    color: white;
-    font-size: 20px;
-    border-radius: 50%;
-}
-.lupa-icon{
-    top: 0;
-    right: 0;
-    background: #440080;
-    width: 20px;
-    height: 20px;
-    text-align: center;
-    color: white;
-    border-radius: 50%;
-    cursor: pointer;
-}
+
+
+
