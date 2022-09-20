@@ -241,9 +241,9 @@ p {
     padding: 100;
     margin-right: 10px;
     margin-left: 10px;
+    flex-direction:column;
     justify-content: center;
     align-items: center;
-    flex-direction:column;
     object-fit: cover;
     }
    
