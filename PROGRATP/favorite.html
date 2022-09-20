@@ -10,7 +10,35 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1 class ="titulo fav">Tus favoritos</h1>
+    <header>
+        <div class="titulogo">
+            <img class="logo" src="./img_home/AFT logo.png" alt="AFTlogo">
+            <h1>AFTmovies</h1>
+        </div>
+       
+        <div class="nav">
+            <ul class="list_nav">
+    
+                <li class="home">
+                <a href="index.html">Home</a>
+                </li>
+                <li class="generos">
+                <a href="genres.html">Géneros</a>
+                </li>
+                <li class="fav">
+                <a href="favorite.html">Favoritos</a>
+                </li>
+    
+            </ul>
+        </div>
+        <div class="buscador">
+            <form action="./search_results.html" method="get" class="buscador" id="buscarterm">
+                <input type="text" value="" name="search" placeholder="Película, serie...">
+                <button class="lupa" id="search" type="submit"><img src="./imagenes-detail/icone-loupe-noir.png" class="lupa-icon"></button>
+            </form>                            
+        </div>
+    </header>
+    
     <h2>Películas Favoritas</h2>
     <section class = "container"> 
         <article class="fav uno">
