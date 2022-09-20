@@ -308,9 +308,7 @@ p {
 }
 
     
-article .titular{
-    padding-bottom: 0px;
-    }
+
     
     
 .titular img { 
@@ -321,7 +319,7 @@ article .titular{
     
 .titulos{
     display:inline-block;
-    margin-block-start: 0em;
+    margin-block-start: 10px;
     margin-block-end: 0em;
     width: 50%;
     }
@@ -351,8 +349,6 @@ article .titular{
     
 }
 article.lista{
-    padding: 0%;
-    height: 0px;
     color:aliceblue;
     text-align: left;
     
@@ -362,15 +358,13 @@ a{
     text-decoration: none;
     color: aliceblue;
 }
-.premios{
+article .premios{
     text-align: center;
 }
 .titulos-detail{
     display: inline;
-    margin-block-start: 0em;
-    margin-block-end: 0em;
     width: 50%;
-    font-size: 35px;
+    font-size: 45px;
     } 
 
  
