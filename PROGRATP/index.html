@@ -8,244 +8,246 @@
     <link rel="stylesheet" href="./css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Electrolize&family=Open+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+    <div class="contenedorgral">
+        <header>
+            <div class="titulogo">
+                <img class="logo" src="./img_home/AFT logo.png" alt="AFTlogo">
+                <h1>AFTmovies</h1>
+            </div>
+        
+            <div class="nav">
+                <ul class="list_nav">
+        
+                    <li class="home">
+                    <a href="index.html">Home</a>
+                    </li>
+                    <li class="generos">
+                    <a href="genres.html">Géneros</a>
+                    </li>
+                    <li class="fav">
+                    <a href="favorite.html">Favoritos</a>
+                    </li>
+        
+                </ul>
+            </div>
+            <div class="buscador">
+                <form action="./search_results.html" method="get" class="buscador" id="buscarterm">
+                    <input type="text" value="" name="search" placeholder="Película, serie...">
+                    <button class="lupa" id="search" type="submit"><img src="./imagenes-detail/icone-loupe-noir.png" class="lupa-icon"></button>
+                </form>                            
+            </div>
+        </header>
 
-    <header>
-        <div class="titulogo">
-            <img class="logo" src="./img_home/AFT logo.png" alt="AFTlogo">
-            <h1>AFTmovies</h1>
-        </div>
-       
-        <div class="nav">
-            <ul class="list_nav">
-    
-                <li class="home">
-                <a href="index.html">Home</a>
-                </li>
-                <li class="generos">
-                <a href="genres.html">Géneros</a>
-                </li>
-                <li class="fav">
-                <a href="favorite.html">Favoritos</a>
-                </li>
-    
-            </ul>
-        </div>
-        <div class="buscador">
-            <form action="./search_results.html" method="get" class="buscador" id="buscarterm">
-                <input type="text" value="" name="search" placeholder="Película, serie...">
-                <button class="lupa" id="search" type="submit"><img src="./imagenes-detail/icone-loupe-noir.png" class="lupa-icon"></button>
-            </form>                            
-        </div>
-    </header>
-
-    <main>
-        <h2 class="titulo_ppl">Estrenos</h2>
-        <section class="vistohoy">
-            <article class="fav uno">
-                <a href="./detail_movie.html">
-                <img  class="foto" src="./css/imgs/malefica.jpeg" alt="">
-                <h4>Malefica</h4>
-                </a>
-            </article>
-
-            <article class="fav uno">
-                <a href="./detail_serie.html">
-                <img  class="foto" src="./css/imgs/prison break.jpeg" alt="">
-                <h4>Prison Break</h4>
-                </a>
-            </article>
-
-            <article class="fav uno">
-                <a href="./detail_movie.html">
-                <img  class="foto" src="./css/imgs/riverdale.jpeg" alt="">
-                <h4>Riverdale</h4>
-                </a>
-            </article>
-
-            <article class="fav uno">
-                <a href="./detail_serie.html">
-                <img  class="foto" src="./css/imgs/La_casa_de_papel_Serie_de_TV-844739080-large.jpeg" alt="">
-                <h4>La Casa de Papel</h4>
-                </a>
-            </article>
-
-            <article class="fav uno">
-                <a href="./detail_movie.html">
-                <img  class="foto" src="./css/imgs/friends.webp" alt="">
-                <h4>Friends</h4>
-                </a>
-            </article>
-        </section>
-
-        <h2 class="titulo_ppl">Peliculas populares</h2>
-        <section class="peliculas_populares">
-            <article class="fav uno">
-                <a href="./detail_movie.html">
-                <img class="foto" src="./css/imgs/top gun .jpeg" alt="">
-                <h4>Top Gun</h4>
-                </a>
-            </article>
-
-            <article class="fav uno">
-                <a href="./detail_movie.html">
-                <img  class="foto" src="./css/imgs/avatar.jpeg" alt="">
-                <h4>Avatar</h4>
-                </a>
-            </article>
-
-            <article class="fav uno">
-                <a href="./detail_movie.html">
-                <img class="foto"  src="./css/imgs/Diario-de-una-pasion.jpeg" alt="">
-                <h4>Diario de una Pasión</h4>
-                </a>
-            </article>
-
-            <article class="fav uno">
-                <a href="./detail_movie.html">
-                <img  class="foto" src="./css/imgs/titanic fav.jpeg" alt="">
-                <h4>Titanic</h4>
-                </a>
-            </article>
-
-            <article class="fav uno">
-                <a href="./detail_movie.html">
-                    <img  class="foto" src="./css/imgs/rapidosyfuriosos2.jpg" alt="">
-                    <h4>Rápidos y furiosos</h4>
+        <main>
+            <h2 class="titulo_ppl">Estrenos</h2>
+            <section class="vistohoy">
+                <article class="fav uno">
+                    <a href="./detail_movie.html">
+                    <img  class="foto" src="./css/imgs/malefica.jpeg" alt="">
+                    <h4>Malefica</h4>
                     </a>
-            </article>
-        </section>
+                </article>
 
-        <h2 class="titulo_ppl">Series populares</h2>
-        <section class="series_populares">
-            <article class="fav uno">
-                <a href="./detail_serie.html">
-                <img  class="foto" src="./css/imgs/crown.webp" alt="">
-                <h4>The Crown</h4>
-                </a>
-            </article>
+                <article class="fav uno">
+                    <a href="./detail_serie.html">
+                    <img  class="foto" src="./css/imgs/prison break.jpeg" alt="">
+                    <h4>Prison Break</h4>
+                    </a>
+                </article>
 
-            <article class="fav uno">
-                <a href="./detail_serie.html">
-                <img  class="foto" src="./css/imgs/gossip girl.jpeg" alt="">
-                <h4>Gossip Girl</h4>
-                </a>
-            </article>
+                <article class="fav uno">
+                    <a href="./detail_movie.html">
+                    <img  class="foto" src="./css/imgs/riverdale.jpeg" alt="">
+                    <h4>Riverdale</h4>
+                    </a>
+                </article>
 
-            <article class="fav uno">
-                <a href="./detail_serie.html">
-                <img  class="foto" src="./css/imgs/prison break.jpeg" alt="">
-                <h4>Prison Break</h4>
-                </a>
-            </article>
+                <article class="fav uno">
+                    <a href="./detail_serie.html">
+                    <img  class="foto" src="./css/imgs/La_casa_de_papel_Serie_de_TV-844739080-large.jpeg" alt="">
+                    <h4>La Casa de Papel</h4>
+                    </a>
+                </article>
 
-            <article class="fav uno">
-                <a href="./detail_serie.html">
-                <img class="foto"  src="./css/imgs/how i met.jpeg" alt="">
-                <h4>How I Met your Mother</h4>
-                </a>
-            </article>
+                <article class="fav uno">
+                    <a href="./detail_movie.html">
+                    <img  class="foto" src="./css/imgs/friends.webp" alt="">
+                    <h4>Friends</h4>
+                    </a>
+                </article>
+            </section>
 
-            <article class="fav uno">
-                <a href="./detail_serie.html">
-                <img  class="foto" src="./css/imgs/La_casa_de_papel_Serie_de_TV-844739080-large.jpeg" alt="">
-                <h4>La Casa de Papel</h4>
-                </a>
-            </article>
-        </section>
+            <h2 class="titulo_ppl">Peliculas populares</h2>
+            <section class="peliculas_populares">
+                <article class="fav uno">
+                    <a href="./detail_movie.html">
+                    <img class="foto" src="./css/imgs/top gun .jpeg" alt="">
+                    <h4>Top Gun</h4>
+                    </a>
+                </article>
 
-        <h2 class="titulo_ppl">Recomendados</h2>
-        <section class="vistohoy">
-            <article class="fav uno">
-                <a href="./detail_movie.html">
-                <img  class="foto" src="./css/imgs/malefica.jpeg" alt="">
-                <h4>Malefica</h4>
-                </a>
-            </article>
+                <article class="fav uno">
+                    <a href="./detail_movie.html">
+                    <img  class="foto" src="./css/imgs/avatar.jpeg" alt="">
+                    <h4>Avatar</h4>
+                    </a>
+                </article>
 
-            <article class="fav uno">
-                <a href="./detail_movie.html">
-                <img  class="foto" src="./css/imgs/prison break.jpeg" alt="">
-                <h4>Prison Break</h4>
-                </a>
-            </article>
+                <article class="fav uno">
+                    <a href="./detail_movie.html">
+                    <img class="foto"  src="./css/imgs/Diario-de-una-pasion.jpeg" alt="">
+                    <h4>Diario de una Pasión</h4>
+                    </a>
+                </article>
 
-            <article class="fav uno">
-                <a href="./detail_movie.html">
-                <img  class="foto" src="./css/imgs/riverdale.jpeg" alt="">
-                <h4>Riverdale</h4>
-                </a>
-            </article>
+                <article class="fav uno">
+                    <a href="./detail_movie.html">
+                    <img  class="foto" src="./css/imgs/titanic fav.jpeg" alt="">
+                    <h4>Titanic</h4>
+                    </a>
+                </article>
 
-            <article class="fav uno">
-                <a href="./detail_serie.html">
-                <img  class="foto" src="./css/imgs/La_casa_de_papel_Serie_de_TV-844739080-large.jpeg" alt="">
-                <h4>La Casa de Papel</h4>
-                </a>
-            </article>
+                <article class="fav uno">
+                    <a href="./detail_movie.html">
+                        <img  class="foto" src="./css/imgs/rapidosyfuriosos2.jpg" alt="">
+                        <h4>Rápidos y furiosos</h4>
+                        </a>
+                </article>
+            </section>
 
-            <article class="fav uno">
-                <a href="./detail_movie.html">
-                <img  class="foto" src="./css/imgs/friends.webp" alt="">
-                <h4>Friends</h4>
-                </a>
-            </article>
-        </section>
+            <h2 class="titulo_ppl">Series populares</h2>
+            <section class="series_populares">
+                <article class="fav uno">
+                    <a href="./detail_serie.html">
+                    <img  class="foto" src="./css/imgs/crown.webp" alt="">
+                    <h4>The Crown</h4>
+                    </a>
+                </article>
 
-        <h2 class="titulo_ppl">Lo más visto hoy</h2>
-        <section class="vistohoy">
-            <article class="fav uno">
-                <a href="./detail_movie.html">
-                <img  class="foto" src="./css/imgs/this is us fav serie.jpeg" alt="">
-                <h4>This is us</h4>
-                </a>
-            </article>
+                <article class="fav uno">
+                    <a href="./detail_serie.html">
+                    <img  class="foto" src="./css/imgs/gossip girl.jpeg" alt="">
+                    <h4>Gossip Girl</h4>
+                    </a>
+                </article>
 
-            <article class="fav uno">
-                <a href="./detail_movie.html">
-                <img  class="foto" src="./css/imgs/el juego del calamar.jpeg" alt="">
-                <h4>El juego del calamar</h4>
-                </a>
-            </article>
+                <article class="fav uno">
+                    <a href="./detail_serie.html">
+                    <img  class="foto" src="./css/imgs/prison break.jpeg" alt="">
+                    <h4>Prison Break</h4>
+                    </a>
+                </article>
 
-            <article class="fav uno">
-                <a href="./detail_movie.html">
-                <img  class="foto" src="./css/imgs/cobrakai.png" alt="">
-                <h4>Cobra Kai</h4>
-                </a>
-            </article>
+                <article class="fav uno">
+                    <a href="./detail_serie.html">
+                    <img class="foto"  src="./css/imgs/how i met.jpeg" alt="">
+                    <h4>How I Met your Mother</h4>
+                    </a>
+                </article>
 
-            <article class="fav uno">
-                <a href="./detail_serie.html">
-                <img  class="foto" src="./css/imgs/pretty little liars.jpeg" alt="">
-                <h4>Pretty Little Liars</h4>
-                </a>
-            </article>
+                <article class="fav uno">
+                    <a href="./detail_serie.html">
+                    <img  class="foto" src="./css/imgs/La_casa_de_papel_Serie_de_TV-844739080-large.jpeg" alt="">
+                    <h4>La Casa de Papel</h4>
+                    </a>
+                </article>
+            </section>
 
-            <article class="fav uno">
-                <a href="./detail_serie.html">
-                <img  class="foto" src="./css/imgs/friends.webp" alt="">
-                <h4>Friends</h4>
-                </a>
-            </article>
-        </section>
-    </main>
+            <h2 class="titulo_ppl">Recomendados</h2>
+            <section class="vistohoy">
+                <article class="fav uno">
+                    <a href="./detail_movie.html">
+                    <img  class="foto" src="./css/imgs/malefica.jpeg" alt="">
+                    <h4>Malefica</h4>
+                    </a>
+                </article>
 
-    <footer>
-        <div class="foot">
-            <img src="./img_home/AFT logo.png" alt="AFTlogo">
-            <ul class="li_foot">
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./genres.html">Géneros</a></li>
-                <li><a href="./favorite.html">Favoritos</a></li>
-            </ul>
-            <ul class="li_foot">
-                <li class="item_foot" ><a href="./pag_footer.html">Contacto</a></li>
-                <li class="item_foot" ><a href="./pag_footer.html">Ayuda</a></li>
-                <li class="item_foot" ><a href="./pag_footer.html">Términos y Condiciones de Uso</a></li>
-            </ul>
-        </div>
-    </footer>
+                <article class="fav uno">
+                    <a href="./detail_movie.html">
+                    <img  class="foto" src="./css/imgs/prison break.jpeg" alt="">
+                    <h4>Prison Break</h4>
+                    </a>
+                </article>
+
+                <article class="fav uno">
+                    <a href="./detail_movie.html">
+                    <img  class="foto" src="./css/imgs/riverdale.jpeg" alt="">
+                    <h4>Riverdale</h4>
+                    </a>
+                </article>
+
+                <article class="fav uno">
+                    <a href="./detail_serie.html">
+                    <img  class="foto" src="./css/imgs/La_casa_de_papel_Serie_de_TV-844739080-large.jpeg" alt="">
+                    <h4>La Casa de Papel</h4>
+                    </a>
+                </article>
+
+                <article class="fav uno">
+                    <a href="./detail_movie.html">
+                    <img  class="foto" src="./css/imgs/friends.webp" alt="">
+                    <h4>Friends</h4>
+                    </a>
+                </article>
+            </section>
+
+            <h2 class="titulo_ppl">Lo más visto hoy</h2>
+            <section class="vistohoy">
+                <article class="fav uno">
+                    <a href="./detail_movie.html">
+                    <img  class="foto" src="./css/imgs/this is us fav serie.jpeg" alt="">
+                    <h4>This is us</h4>
+                    </a>
+                </article>
+
+                <article class="fav uno">
+                    <a href="./detail_movie.html">
+                    <img  class="foto" src="./css/imgs/el juego del calamar.jpeg" alt="">
+                    <h4>El juego del calamar</h4>
+                    </a>
+                </article>
+
+                <article class="fav uno">
+                    <a href="./detail_movie.html">
+                    <img  class="foto" src="./css/imgs/cobrakai.png" alt="">
+                    <h4>Cobra Kai</h4>
+                    </a>
+                </article>
+
+                <article class="fav uno">
+                    <a href="./detail_serie.html">
+                    <img  class="foto" src="./css/imgs/pretty little liars.jpeg" alt="">
+                    <h4>Pretty Little Liars</h4>
+                    </a>
+                </article>
+
+                <article class="fav uno">
+                    <a href="./detail_serie.html">
+                    <img  class="foto" src="./css/imgs/friends.webp" alt="">
+                    <h4>Friends</h4>
+                    </a>
+                </article>
+            </section>
+        </main>
+
+        <footer>
+            <div class="foot">
+                <img class="logofoot" src="./img_home/AFT logo.png" alt="AFTlogo">
+                <ul class="li_foot">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./genres.html">Géneros</a></li>
+                    <li><a href="./favorite.html">Favoritos</a></li>
+                </ul>
+                <ul class="li_foot">
+                    <li class="item_foot" ><a href="./pag_footer.html">Contacto</a></li>
+                    <li class="item_foot" ><a href="./pag_footer.html">Ayuda</a></li>
+                    <li class="item_foot" ><a href="./pag_footer.html">Términos y Condiciones de Uso</a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
