@@ -238,11 +238,9 @@ p {
 .foto {
     width: 250px;
     height: 380px;
-    padding: 100;
     margin-right: 10px;
     margin-left: 10px;
-    flex-direction:column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     object-fit: cover;
     }
