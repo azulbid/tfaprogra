@@ -10,50 +10,79 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
-    <section class="container">
-        <article class="titular">
-            <h1 class="titulos-detail">Prison Break</h1>
-            <img class="imagen-detalle" src="./css/imgs/prison break.jpeg" alt="top-gun">
-            
-        </article>
-    
-        <article class="lista">
-            <h3 class="favoritos"><a  href="./favorite.html">Favoritos</a></h3>
-            <ul>Clasificacion 4/5 </ul>
-            <ul>Fecha de estreno 27-7-2005</ul>
-            <ul><a href="./genres.html">Genero</a> Policial-Drama </ul>
+    <div class="contenedorgral">
+        <header>
+            <div class="titulogo">
+                <img class="logo" src="./img_home/AFT logo.png" alt="AFTlogo">
+                <h1>AFTmovies</h1>
+            </div>
         
-           <article class="sinopsis">
-                <h2>Sinopsis</h2>
-                <p>Cuando Terrence Steadman, el hermano de la Vicepresidenta de los Estados Unidos, es asesinado, Lincoln Burrows  es acusado y enviado a la Penitenciaría Estatal Fox River hasta que llegue el momento de su ejecución. Su hermano menor, Michael , se niega a aceptar que Lincoln sea culpable y está decidido a ayudarle a eludir su ejecución. La penitenciaría es una prisión de máxima seguridad de la que es imposible escapar, pero Michael estará dispuesto a todo por liberar a su hermano. De esta forma elabora un complejo plan que inicia tatuándose un mapa completo de la prisión por todo el cuerpo.</p>
+            <div class="nav">
+                <ul class="list_nav">
+        
+                    <li class="home">
+                    <a href="index.html">Home</a>
+                    </li>
+                    <li class="generos">
+                    <a href="genres.html">Géneros</a>
+                    </li>
+                    <li class="fav">
+                    <a href="favorite.html">Favoritos</a>
+                    </li>
+        
+                </ul>
+            </div>
+            <div class="buscador">
+                <form action="./search_results.html" method="get" class="buscador" id="buscarterm">
+                    <input type="text" value="" name="search" placeholder="Película, serie...">
+                    <button class="lupa" id="search" type="submit"><img src="./imagenes-detail/icone-loupe-noir.png" class="lupa-icon"></button>
+                </form>                            
+            </div>
+        </header>
+        <section class="container">
+            <article class="titular">
+                <h1 class="titulos-detail">Prison Break</h1>
+                <img class="imagen-detalle" src="./css/imgs/prison break.jpeg" alt="top-gun">
+                
             </article>
-
-            <article class="premios">
-            <h3>Premios</h3>
-                <p>2005: Globos de Oro: 2 nominaciones: Mejor serie - drama, mejor actor (Miller)</p>
-                <p>2005: Emmy: Nominada al mejor tema principal</p>
-                <p>2008: Sindicato de Actores (SAG): Nom. a Mejores especialistas de acción</p>
-            </article>
-        </article>
-    
+        
+            <article class="lista">
+                <h3 class="favoritos"><a  href="./favorite.html">Favoritos</a></h3>
+                <ul>Clasificacion 4/5 </ul>
+                <ul>Fecha de estreno 27-7-2005</ul>
+                <ul><a href="./genres.html">Genero</a> Policial-Drama </ul>
             
-    </section>
+            <article class="sinopsis">
+                    <h2>Sinopsis</h2>
+                    <p>Cuando Terrence Steadman, el hermano de la Vicepresidenta de los Estados Unidos, es asesinado, Lincoln Burrows  es acusado y enviado a la Penitenciaría Estatal Fox River hasta que llegue el momento de su ejecución. Su hermano menor, Michael , se niega a aceptar que Lincoln sea culpable y está decidido a ayudarle a eludir su ejecución. La penitenciaría es una prisión de máxima seguridad de la que es imposible escapar, pero Michael estará dispuesto a todo por liberar a su hermano. De esta forma elabora un complejo plan que inicia tatuándose un mapa completo de la prisión por todo el cuerpo.</p>
+                </article>
 
-    <footer>
-        <div class="foot">
-            <img class="logofoot" src="./img_home/AFT logo.png" alt="AFTlogo">
-            <ul class="li_foot">
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./genres.html">Géneros</a></li>
-                <li><a href="./favorite.html">Favoritos</a></li>
-            </ul>
-            <ul class="li_foot">
-                <li class="item_foot" ><a href="./pag_footer.html">Contacto</a></li>
-                <li class="item_foot" ><a href="./pag_footer.html">Ayuda</a></li>
-                <li class="item_foot" ><a href="./pag_footer.html">Términos y Condiciones de Uso</a></li>
-            </ul>
-        </div>
-    </footer>               
-         
+                <article class="premios">
+                <h3>Premios</h3>
+                    <p>2005: Globos de Oro: 2 nominaciones: Mejor serie - drama, mejor actor (Miller)</p>
+                    <p>2005: Emmy: Nominada al mejor tema principal</p>
+                    <p>2008: Sindicato de Actores (SAG): Nom. a Mejores especialistas de acción</p>
+                </article>
+            </article>
+        
+                
+        </section>
+
+        <footer>
+            <div class="foot">
+                <img class="logofoot" src="./img_home/AFT logo.png" alt="AFTlogo">
+                <ul class="li_foot">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./genres.html">Géneros</a></li>
+                    <li><a href="./favorite.html">Favoritos</a></li>
+                </ul>
+                <ul class="li_foot">
+                    <li class="item_foot" ><a href="./pag_footer.html">Contacto</a></li>
+                    <li class="item_foot" ><a href="./pag_footer.html">Ayuda</a></li>
+                    <li class="item_foot" ><a href="./pag_footer.html">Términos y Condiciones de Uso</a></li>
+                </ul>
+            </div>
+        </footer>               
+    </div>         
 </body> 
 </html>
