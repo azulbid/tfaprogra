@@ -12,8 +12,8 @@ buscador.addEventListener('submit', function(event) {
     }
 )
 
-let contenedor = document.querySelector('.pcontenedor')
-let titulo = document.querySelector('.titfav')
+let contenedor = document.querySelector('container')
+let titulo = document.querySelector('.fav cinco')
 let peliculas = [];
 
 if (localStorage.getItem('peliculas') && localStorage.getItem('peliculas') != null){
