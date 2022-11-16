@@ -1,20 +1,40 @@
-let url = `https://api.themoviedb.org/3/movie/${movie_detail}?api_key=e3f1ae8bae04c04c63af7b6996decd02&language=en-US`
+
+
+// falta darle formato 
+let query = location.search; //location search es toda la url de la pag la guardas en la variable query 
+let stringToObject = new URLSearchParams(query); //metes esa variable en el metodo, te devuelve todas las urls de la pag
+let aBuscar = stringToObject.get('Search'); // agarras search 
+let url = `https://api.themoviedb.org/3/search/movie?api_key=385115c8e9bd0bc996d46c69d38601de&language=en-US&query=${aBuscar}&page=1&include_adult=false`
 
 fetch(url)
-    .then(function(response){
+    .then(function (response) {
         return response.json()
     })
-    .then(function(data){
-        //console.log(data);
+    .then(function (data) {
+        console.log(data);
+        let informacion = data.results
+        let container = document.querySelector('.searchresults');
+        let Searchtitle = document.querySelector('.titulohp')
+        if (informacion.length == 0){
+            Searchtitle.innerText = 'No se encontraron resultados'
+        }
+        else{
+            for (let i = 0; i<informacion.length; i++){
+                Searchtitle.innerText =  `Resultado de busqueda: ${aBuscar}`
+                container.innerHTML  += `
+                <a href="./detail-movie.html?id=${informacion[i].id}">
+                <article class="pelif">
+                    <img class="imagenHP"  src="https://image.tmdb.org/t/p/w500/${informacion[i].poster_path}" alt="imagen">
+                    <div class="tituloañoHP">
+                        <p class="titulo">${informacion[i].original_title}</p>
+                        <p class="año">${informacion[i].release_date}</p>
+                    </div>
+                </article>`
+            }
+        }
         
 
-        let image = document.querySelector('.imagen-detalle');
-        image.src=data.cover_big;
-
-        let 
-       
-
     })
-    .catch (function(e){
-        console.log(e);
+    .catch(function (error) {
+        console.log(error)
     })

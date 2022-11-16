@@ -1,42 +1,21 @@
-let buscador = document.querySelector('formulario')
-let camp = document.querySelector('.buscadortxt')
+window.addEventListener('load', function() {
+    let formulario = document.querySelector('form');
+    let buscador = document.querySelector('[name="search"]'); 
+    let aviso = document.querySelector('.aviso')
+    formulario.addEventListener('submit', function(e){
+        e.preventDefault();
+        if( buscador.value === ""){
+            aviso.innerText = 'El buscador está vacío';
+        } else {
+            this.submit();
+        }
 
-buscador.addEventListener('submit', function(event) {
-    event.preventDefault();
-    if (camp.value == '') {
-        alert('Ingrese película o serie a buscar')
-    }
-    else {
-        this.submit()
-    }
-    }
-)
+    })
 
-let contenedor = document.querySelector('container')
-let titulo = document.querySelector('.fav cinco')
-let peliculas = [];
+    buscador.addEventListener('input', function(){
+        aviso.innerText= '';
 
-if (localStorage.getItem('peliculas') && localStorage.getItem('peliculas') != null){
-    peliculas = JSON.parse(localStorage.getItem('peliculas'));
-}
-else if (peliculas.length == 0){
-    titulo.innerHTML = 'No hay favoritos seleccionados'
-}
-else {
-    for (let i = 0; i<peliculas.length; i++) {
-        let urlTrack = //link 
-        + peliculas[i];
-        fetch(urlTrack) 
-            .then (function(response){
-                return response.json();
-            })
-            .tgen (function(datos) {
-                console.log(datos)
-                contenedor.innerHTML += ''
-// <article class = "textodebusq">
-// img src 
-// h3
-// br
-// cierro article
-            })
-        }}
+    })
+})
+
+//completar

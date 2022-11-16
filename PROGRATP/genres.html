@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Electrolize&family=Open+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 </head>
-<body>
+<!--<body>
     <div class="contenedorgral">
         <header>
             <div class="titulogo">
@@ -114,8 +114,26 @@
                 <img class = "foto " src="./css/imgs/this is us fav serie.jpeg" alt="">
                 </a>
             </article>
+        </section>-->
+
+<body>
+        <form class="busqueda" action="./search-results.html" method="get">
+            <input class="search" type="text" name="Search" placeholder="¿Qué queres ver?" value="">
+            <button class="bottonsearch" type="submit">Search</button>
+        </form>
+    </nav>
+    <div class="fondogeneros">
+        <h2 class="peliculaspopulares">Peliculas</h2>
+        <section class="contenedorgen">
+            <a href="./detail_movie.html"></a>
         </section>
-    
+
+        <h2 class="peliculaspopulares">Series</h2>
+        <section class="contenedorgen1">
+            <a href="./detail_serie.html"></a>
+        </section>
+    </div>
+
         <footer>
             <div class="foot">
                 <img class="logofoot" src="./img_home/AFT logo.png" alt="AFTlogo">
@@ -132,5 +150,6 @@
             </div>
         </footer>
     </div>
+    <script src="./js/genres.js"></script>
 </body>
 </html>

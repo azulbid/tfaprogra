@@ -284,7 +284,6 @@ p {
     align-items: center;
     object-fit: cover;
     }
-   
     
 .terror {
     order: 1;
@@ -789,5 +788,4 @@ ul.footlist {
 
     h2.h2foot {
         justify-content: center;
-        font-size: 30px;
-    }
+        font-size: 30px;}}
