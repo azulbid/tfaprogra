@@ -13,7 +13,7 @@ buscador.addEventListener('submit', function(event) {
 )
 
 let contenedor = document.querySelector('container')
-let titulo = document.querySelector('.fav cinco')
+let titulo = document.querySelector('.peliculas')
 let peliculas = [];
 
 if (localStorage.getItem('peliculas') && localStorage.getItem('peliculas') != null){
@@ -24,11 +24,14 @@ else if (peliculas.length == 0){
 }
 else {
     for (let i = 0; i<peliculas.length; i++) {
-        let urlPelis = 
-        "https://api.themoviedb.org/3/tv/popular?api_key=hola&language=en-US&page=1"
+        let urlPelis = "https://api.themoviedb.org/3/tv/top_rated?api_key=3D385115c8e9bd0bc996d46c69d38601de&language=en-US&page=1"
         + peliculas[i];
-        fetch(urlTrack) 
+        fetch(urlPelis) 
             .then (function(response){
+              //  let info = data.results
+              //  let tContainer= document.querySelector('.peliculas');
+              //  let contenidoT= '';
+
                 return response.json();
             })
             .then (function(datos) {
