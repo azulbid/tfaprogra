@@ -1,3 +1,4 @@
+// completar con los links
 window.addEventListener('load', function() {
     let formulario = document.querySelector('form');
     let buscador = document.querySelector('[name="search"]');

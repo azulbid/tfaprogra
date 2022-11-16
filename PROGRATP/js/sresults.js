@@ -1,3 +1,4 @@
+// falta darle formato 
 let query = location.search; //location search es toda la url de la pag la guardas en la variable query 
 let stringToObject = new URLSearchParams(query); //metes esa variable en el metodo, te devuelve todas las urls de la pag
 let aBuscar = stringToObject.get('Search'); // agarras search 
