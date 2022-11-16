@@ -10,7 +10,7 @@ fetch(url)
     .then(function (data) {
         console.log(data);
         let informacion = data.results
-        let conteainer = document.querySelector('.searchresults');
+        let container = document.querySelector('.searchresults');
         let Searchtitle = document.querySelector('.titulohp')
         if (informacion.length == 0){
             Searchtitle.innerText = 'No se encontraron resultados'
