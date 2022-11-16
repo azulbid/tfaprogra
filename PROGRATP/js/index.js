@@ -33,12 +33,14 @@ fetch(url1)
     for(let i=0; i<info.length; i++){
         contenidoT +=
         `<ul class="caja"> 
-        <a href="./detail_movie.html?id=${info[i].id }"> 
-        <img class="fotos" src= ${info[i].genre_ids.poster_path}"></img> </a> 
+        <a href="./detail_movie.html?id=${info[i].id }">
+        <img class="imagenPS" src="https://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="imagen"> 
+        </a> 
         <a href="./detail_movie.html"class="names">${info[i].title}</a>  
         <a href=".detail_movie.html"></a> 
        "class="names">${info[i].title}</a> 
         </li>`
+      
     }
         tContainer.innerHTML += contenidoT
     })

@@ -37,7 +37,7 @@ window.addEventListener('load', function() {
             let foto = document.querySelector(".fotoaa");
             foto.src = data.picture_medium;
 
-        //para series
+
             let urlGeneros2 = //link
             fetch(urlGeneros2)
             .then(function(response){
@@ -53,7 +53,7 @@ window.addEventListener('load', function() {
                     for(let i=0; i<info.length; i++){
 
                         contenidoGenerosPage +=  `<article class="caja2"> 
-                                                    <li class="pequena"> 
+                                                    <li class="chic"> 
                                                     <a href="./detail-artist.html?id=${info[i].id}" class="names">${info[i].name}</a> 
                                                     <a href="./detail-artist.html?id=${info[i].id}"><img class="fotos" src="${info[i].picture_medium}"></img></a> 
                                                     </li>

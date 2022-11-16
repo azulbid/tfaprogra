@@ -1,25 +1,20 @@
 window.addEventListener('load', function() {
     let formulario = document.querySelector('form');
-    let buscador = document.querySelector('[name="search"]');
+    let buscador = document.querySelector('[name="search"]'); 
     let aviso = document.querySelector('.aviso')
     formulario.addEventListener('submit', function(e){
         e.preventDefault();
-        if( buscador.value == ""){
-            aviso.innerText = 'El buscador no puede estar vacío';
+        if( buscador.value === ""){
+            aviso.innerText = 'El buscador está vacío';
         } else {
             this.submit();
         }
 
     })
 
-    buscador.addEventListener('input', function(){
-        aviso.innerText= '';
+    let urlGen = "https://api.themoviedb.org/3/genre/movie/list?api_key=385115c8e9bd0bc996d46c69d38601de&language=en-US"
 
-    })
-
-    let urlDetalleG = ''
-
-    fetch(urlDetalleG)
+    fetch(urlGen)
     .then(function(response){
         return response.json()
 
@@ -31,7 +26,6 @@ window.addEventListener('load', function() {
         let contenidoGenerosPage= '';
 
         for(let i=0; i<info.length; i++){
-
             contenidoGenerosPage +=   ` <article class="caja"> 
                                         <li> 
                                         <a href="./detail-genres.html" class="names">${info[i].name}</a> 
