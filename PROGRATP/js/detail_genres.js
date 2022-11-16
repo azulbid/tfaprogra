@@ -25,7 +25,7 @@ window.addEventListener('load', function() {
 
     let urlDetGenero = //link `https://link/${id}`;
 
-    fetch( urlDetGenero )
+    fetch(urlDetGenero)
         .then( function(response){
             return response.json();
         })
