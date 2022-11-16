@@ -12,33 +12,45 @@ window.addEventListener('load', function() {
 
     })
 
-    let urlGen = "https://api.themoviedb.org/3/genre/movie/list?api_key=385115c8e9bd0bc996d46c69d38601de&language=en-US"
-
+//PELICULAS
+    let urlGen = "https://api.themoviedb.org/3/genre/movie/list?api_key=5d8d9a4eaf9e1d9b0b7f27344d895a3e&language=es-ES"
     fetch(urlGen)
-    .then(function(response){
-        return response.json()
+        .then(function(response){
+            return response.json()
 
     })
     .then(function(data){
-        let info = data.data;
-        console.log(info);
-        let generosPageContainer= document.querySelector('.listas');
-        let contenidoGenerosPage= '';
+        let generos = data.genres;
+        console.log(data);
+        let seccion = document.querySelector('.contenedorgen');
+        for(let i=0; i<generos.length; i++){
+            seccion.innerHTML += `<article class="generos"> <a href="./detail-generes.html?id=${generos[i].id}"> ${generos[i].name}</a> </article>`
 
-        for(let i=0; i<info.length; i++){
-            contenidoGenerosPage +=   ` <article class="caja"> 
-                                        <li> 
-                                        <a href="./detail-genres.html" class="names">${info[i].name}</a> 
-                                        <a href="./detail-genres.html?id=${info[i].id}">
-                                        <img class="fotos" src="${info[i].img}" alt="FOTO GENERO LATINO"></a>
-                                        </li>
-                                        </article>`
-                
-        }
-        generosPageContainer.innerHTML += contenidoGenerosPage
-    })  
-    .catch( function(error){
-        console.log(error);
+        }}
+
+    )
+    .catch(function (error) {
+        console.log(error)
     })
 
+// Para series
+
+let ruta = 'https://api.themoviedb.org/3/genre/tv/list?api_key=5d8d9a4eaf9e1d9b0b7f27344d895a3e&language=es-ES'
+fetch(ruta)
+    .then(function (response) {
+        return response.json()
+    })
+    .then(function (data) {
+        console.log(data);
+        let generos = data.genres
+        let seccion = document.querySelector(".contenedorgen1");
+        for (let i = 0; i < generos.length; i++) {
+            seccion.innerHTML += `<article class="generos"> <a href="./detail-generes.html?id=${generos[i].id}"> ${generos[i].name}</a> </article>`
+
+        }}
+
+    )
+    .catch(function (error) {
+        console.log(error)
+    })
 })
