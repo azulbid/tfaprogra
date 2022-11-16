@@ -10,7 +10,7 @@ fetch(url)
     .then(function (data) {
         console.log(data);
         let informacion = data.results
-        let conteiner = document.querySelector('.searchresults');
+        let conteainer = document.querySelector('.searchresults');
         let Searchtitle = document.querySelector('.titulohp')
         if (informacion.length == 0){
             Searchtitle.innerText = 'No se encontraron resultados'
@@ -18,7 +18,7 @@ fetch(url)
         else{
             for (let i = 0; i<informacion.length; i++){
                 Searchtitle.innerText =  `Resultado de busqueda: ${aBuscar}`
-                conteiner.innerHTML  += `
+                container.innerHTML  += `
                 <a href="./detail-movie.html?id=${informacion[i].id}">
                 <article class="pelif">
                     <img class="imagenHP"  src="https://image.tmdb.org/t/p/w500/${informacion[i].poster_path}" alt="imagen">
