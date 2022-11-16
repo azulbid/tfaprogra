@@ -34,14 +34,16 @@
                 </ul>
             </div>
             <div class="buscador">
-                <form action="./search_results.html" method="get" class="buscador" id="buscarterm">
-                    <input type="text" value="" name="search" placeholder="Película, serie...">
-                    <button class="lupa" id="search" type="submit"><img src="./imagenes-detail/icone-loupe-noir.png" class="lupa-icon"></button>
-                </form>                            
+                <form action="./search_results.html" method="GET" class="buscador" id="buscarterm">
+                    <input type="text" value="" name="search" placeholder="Película o serie a buscar">
+                    <button class="lupa" id="search" type="submit"><img src="./imagenes-detail/icone-loupe-noir.png" class="lupa-icon">
+                    <p class ="aviso"></p>
+                    </button>
+                </form>                          
             </div>
         </header>
 
-        <main>
+     <!--  <main> 
             <h2 class="titulo_ppl">Estrenos</h2>
             <section class="vistohoy">
                 <article class="fav uno">
@@ -232,7 +234,24 @@
                 </article>
             </section>
         </main>
+--> 
+        <main>
+        <section class="container">
+            <!--<img class="introhome" src="./img/intro.png" alt="">-->
+            <h2 class="titulos"><a href="detail_movie.html" class ="barratexto">Películas</a></h2>
+                <ul class="listas peliculas">
+                </ul> 
+        </section>
+        <section class = "container">
+            <h2 class="titulos"><a href="detail_serie.html" class="barratexto">Series</a></h2>
+            <ul class="listas series">
+                </ul>
 
+        </section>
+            
+            
+        </main>
+       
         <footer>
             <div class="foot">
                 <img class="logofoot" src="./img_home/AFT logo.png" alt="AFTlogo">

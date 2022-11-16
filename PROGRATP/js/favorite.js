@@ -24,19 +24,16 @@ else if (peliculas.length == 0){
 }
 else {
     for (let i = 0; i<peliculas.length; i++) {
-        let urlTrack = //link 
+        let urlPelis = 
+        "https://api.themoviedb.org/3/tv/popular?api_key=hola&language=en-US&page=1"
         + peliculas[i];
         fetch(urlTrack) 
             .then (function(response){
                 return response.json();
             })
-            .tgen (function(datos) {
+            .then (function(datos) {
                 console.log(datos)
                 contenedor.innerHTML += ''
-// <article class = "textodebusq">
-// img src 
-// h3
-// br
-// cierro article
+
             })
         }}
