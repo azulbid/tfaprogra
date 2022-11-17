@@ -13,11 +13,11 @@ fetch(urldetalle)
         let image = document.querySelector('imagen-detalle');
         image.src += data.albun_cover_medium;
 
-        let titulo = document.querySelector(`titulos-detail`)
+        let titulo = document.querySelector(`titulos-detail`);
         titulo.innerText= data.title;
 
-        
-
+        let genero = document.querySelector(`generos`);
+        genero.innerText
     })
     .catch (function(e){
         console.log(e);
