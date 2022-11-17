@@ -27,7 +27,7 @@ fetch(url1)
     })
     .then(function(data){console.log(data);
         let info = data.results
-        let tContainer= document.querySelector('.pelisyseriestop');
+        let tContainer= document.querySelector('.contenedorgral');
         let contenidoT= '';
 
     for(let i=0; i<info.length; i++){
@@ -36,9 +36,9 @@ fetch(url1)
         <a href="./detail_movie.html?id=${info[i].id }">
         <img class="foto" src="https://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="imagen"> 
         </a> 
-        <a href="./detail_movie.html"class="names">${info[i].title}</a>  
+        <a href="./detail_movie.html"class="titulo_ppak">${info[i].title}</a>  
         <a href=".detail_movie.html"></a> 
-       "class="names">${info[i].title}</a> 
+       "class="titulo_ppal">${info[i].title}</a> 
         </li>`
       
     }
@@ -57,7 +57,7 @@ fetch(url1)
         })
         .then(function(data){console.log(data);
             let info = data.results
-            let tContainer= document.querySelector('.pelisyseriestop');
+            let tContainer= document.querySelector('.contenedorgral');
             let contenidoT= '';
 
         for(let i=0; i<info.length; i++){
@@ -89,7 +89,7 @@ fetch(url2)
     })
     .then(function(data){console.log(data);
         let info = data.results
-        let tContainer= document.querySelector('.pelisyseriestop');
+        let tContainer= document.querySelector('.contenedorgral');
         let contenidoT= '';
 
     for(let i=0; i<info.length; i++){
