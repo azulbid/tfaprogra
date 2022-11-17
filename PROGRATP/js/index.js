@@ -27,19 +27,17 @@ fetch(url1)
     })
     .then(function(data){console.log(data);
         let info = data.results
-        let tContainer= document.querySelector('.contenedorgral');
+        let tContainer= document.querySelector('.series_populares');
         let contenidoT= '';
 
     for(let i=0; i<info.length; i++){
         contenidoT +=
-        `<ul class="caja"> 
+        `<article class="fav uno">
         <a href="./detail_movie.html?id=${info[i].id }">
-        <img class="foto" src="https://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="imagen"> 
-        </a> 
-        <a href="./detail_movie.html"class="titulo_ppak">${info[i].title}</a>  
-        <a href=".detail_movie.html"></a> 
-       "class="titulo_ppal">${info[i].title}</a> 
-        </li>`
+        <img  class="foto" src="https://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="">
+        <h4>${info[i].title} </h4>
+        </a>
+        </article>`
       
     }
         tContainer.innerHTML += contenidoT
@@ -48,63 +46,4 @@ fetch(url1)
         console.log(error);
     })  
 
-    let url3 = "https://api.themoviedb.org/3/movie/popular?api_key=385115c8e9bd0bc996d46c69d38601de&language=en-US&page=1"
-
-    fetch(url3)
-        .then(function(response){
-            return response.json()
-
-        })
-        .then(function(data){console.log(data);
-            let info = data.results
-            let tContainer= document.querySelector('.contenedorgral');
-            let contenidoT= '';
-
-        for(let i=0; i<info.length; i++){
-            contenidoT +=
-            `<ul class="caja"> 
-        <a href="./detail_movie.html?id=${info[i].id }">
-        <img class="foto" src="https://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="imagen"> 
-        </a> 
-        <a href="./detail_movie.html"class="names">${info[i].title}</a>  
-        <a href=".detail_movie.html"></a> 
-       "class="names">${info[i].title}</a> 
-        </li>`
-        }
-            tContainer.innerHTML += contenidoT
-        })
-        .catch(function(error){
-            console.log(error);
-         })  
-        })
-
-
-
-let url2 = "https://api.themoviedb.org/3/movie/top_rated?api_key=385115c8e9bd0bc996d46c69d38601de&language=en-US&page=1"
-
-fetch(url2)
-    .then(function(response){
-        return response.json()
-
-    })
-    .then(function(data){console.log(data);
-        let info = data.results
-        let tContainer= document.querySelector('.contenedorgral');
-        let contenidoT= '';
-
-    for(let i=0; i<info.length; i++){
-        contenidoT +=
-        `<ul class="caja"> 
-        <a href="./detail_movie.html?id=${info[i].id }">
-        <img class="foto" src="https://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="imagen"> 
-        </a> 
-        <a href="./detail_movie.html"class="names">${info[i].title}</a>  
-        <a href=".detail_movie.html"></a> 
-       "class="names">${info[i].title}</a> 
-        </li>`
-    }
-        tContainer.innerHTML += contenidoT
-    })
-    .catch(function(error){
-        console.log(error);
-    })  
+})

@@ -48,7 +48,7 @@ window.addEventListener('load', function() {
                 .then(function(data){
                     let info = data.data;
                     console.log(info);
-                    let generosPageContainer= document.querySelector('.listas');
+                    let generosPageContainer= document.querySelector('.contenedorgral');
                     let contenidoGenerosPage= '';
 
                     for(let i=0; i<info.length; i++){

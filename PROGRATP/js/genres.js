@@ -22,7 +22,7 @@ window.addEventListener('load', function() {
     .then(function(data){
         let generos = data.genres;
         console.log(data);
-        let seccion = document.querySelector('.contenedorgen');
+        let seccion = document.querySelector('.contenedorgral');
         for(let i=0; i<generos.length; i++){
             seccion.innerHTML += `<article class="generos"> <a href="./detail-generes.html?id=${generos[i].id}"> ${generos[i].name}</a> </article>`
 

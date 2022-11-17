@@ -27,7 +27,7 @@ fetch(url1)
     })
     .then(function(data){console.log(data);
         let info = data.results
-        let tContainer= document.querySelector('.pelisyseriestop');
+        let tContainer= document.querySelector('.contenedorgral');
         let contenidoT= '';
 
     for(let i=0; i<info.length; i++){
