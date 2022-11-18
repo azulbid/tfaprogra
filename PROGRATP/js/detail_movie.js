@@ -18,8 +18,8 @@ window.addEventListener('load', function() {
     })
 
 
-let url1 = "https://api.themoviedb.org/3/movie/popular?api_key=385115c8e9bd0bc996d46c69d38601de&language=en-US&page=1"
-// let url1= `https://api.themoviedb.org/3/review/${movie_detail}?api_key=e3f1ae8bae04c04c63af7b6996decd02`
+let url1 = `https://api.themoviedb.org/3/movie/${movie_id}?api_key=385115c8e9bd0bc996d46c69d38601de&language=en-US`
+
 
 fetch(url1)
     .then(function(response){
@@ -34,15 +34,7 @@ fetch(url1)
     
         //se crea la info con un for
     for(let i=0; i<info.length; i++){
-        contenidoT +=
-        <ul class="caja"> 
-        <a href="./detail_movie.html?id=${info[i].id }">
-        <img class="foto" src="https://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="imagen"> 
-        </a> 
-        <a href="./detail_movie.html"class="names">${info[i].title}</a>  
-        <a href=".detail_movie.html"></a> 
-        <a>"class="names" ${info[i].title}</a> 
-        </ul>
+
       
     }
         tContainer.innerHTML += contenidoT
