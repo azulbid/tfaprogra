@@ -1,4 +1,4 @@
-window.addEventListener('load', function() {
+window.addEventListener('load', function(){
     let formulario = document.querySelector('form');
     let buscador = document.querySelector('[name="search"]'); 
     let aviso = document.querySelector('.aviso')
@@ -10,21 +10,21 @@ window.addEventListener('load', function() {
             this.submit();
         }
 
-    })
-
-    buscador.addEventListener('input', function(){
+    }) 
+{buscador.addEventListener('input', function(){
         aviso.innerText= '';
 
-    })
+    })}
+    
 
 let qsString = location.search
 let qs2 = new URLSearchParams(qsString)
 //qs2 = {id= 43270}
-let pepe = qs2.get("id")
-console.log(pepe);
+let id = qs2.get("id")
+console.log(id);
 
 
-let urldetmov = `https://api.themoviedb.org/3/movie/${pepe}?api_key=385115c8e9bd0bc996d46c69d38601de&language=en-US`
+let urldetmov = `https://api.themoviedb.org/3/movie/${id}?api_key=385115c8e9bd0bc996d46c69d38601de&language=en-US`
 
 
 fetch(urldetmov)
@@ -33,28 +33,32 @@ fetch(urldetmov)
     })
     .then (function(data){
         console.log(data);
-        
         let bContainer= document.querySelector('.detmovie1');
-        let contenidoT= '';
-      
-    
-       bContainer.innerHTML += contenidoT
-    }
+        let contenidoT= 
+        `<article>
+        <h2>${data.title}</h2>
+        <img src="https://image.tmdb.org/t/p/w500/${data.poster_path}" alt="">
+        <h4> Estreno: ${data.release_date} </h4>
+        <h4> Idioma original: ${data.original_language} </h4>
+        <h4> Puntuación: ${data.vote_average} </h4>
+        <h4> Resumen: ${data.overview}
+        </article>`;
 
-{(        tContainer.innerHTML += contenidoT
+
+       bContainer.innerHTML += contenidoT
     })
+
     .catch(function(error){
         console.log(error);
-    })  
+ })   
  
-})
+
   
   
 let favoritos=[];
 
 
 let storageRecuperado= localStorage.getItem(".favoritos");
-
     if (storageRecuperado != null){
     
     favoritos= JSON.parse(storageRecuperado);
@@ -91,6 +95,4 @@ console.log(localStorage);
 })
 
  
-.catch(function(error){
-    console.log(error);})
-
+})
