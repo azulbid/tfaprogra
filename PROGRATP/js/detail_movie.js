@@ -18,29 +18,36 @@ window.addEventListener('load', function() {
     })
 
 
-let url1 = `https://api.themoviedb.org/3/movie/${movie_id}?api_key=385115c8e9bd0bc996d46c69d38601de&language=en-US`
+let urldetmov = `https://api.themoviedb.org/3/movie/${movie_id}?api_key=385115c8e9bd0bc996d46c69d38601de&language=en-US`
 
 
-fetch(url1)
+fetch(urldetmov)
     .then(function(response){
         return response.json()
     })
-    .then(function(data){
+    .then (function(data){
         console.log(data);
         let info = data.results
-        let tContainer= document.querySelector('.contenedorgral');
+        let bContainer= document.querySelector('.detmovie1');
         let contenidoT= '';
 
-    
-        //se crea la info con un for
     for(let i=0; i<info.length; i++){
-
+            contenidoT +=
+            `<article class="foto">
+            <a href="./detail_movie.html?id=${info[i].id }">
+            <img  class="foto" src="https://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="">
+            <h4>${info[i].title} </h4>
+            <h6<${info[i].release_date} </h6>
+            </a>
+            </article>`
+    
+        }
       
     }
-        tContainer.innerHTML += contenidoT
-    })
+       , bContainer.innerHTML += contenidoT
+    ,
+        )
     .catch(function(error){
         console.log(error);
-    })  
- 
+    })
 })
