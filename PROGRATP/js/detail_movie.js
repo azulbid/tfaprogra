@@ -40,7 +40,7 @@ fetch(urldetmov)
     
        bContainer.innerHTML += contenidoT
     }
-<<<<<<< HEAD
+
 {(        tContainer.innerHTML += contenidoT
     })
     .catch(function(error){
@@ -89,10 +89,8 @@ let personajesFavoritosToString= JSON.stringify(favoritos);
 localStorage.setItem("favoritos", personajesFavoritosToString);
 console.log(localStorage);
 })
-=======
-        )
-    .catch(function(error){
-        console.log(error);
-    })
-})
->>>>>>> d5639e25da37e8f690efb9c2a28e1e104aa4b188
+
+ 
+.catch(function(error){
+    console.log(error);})
+
