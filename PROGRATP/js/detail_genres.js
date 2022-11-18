@@ -15,61 +15,36 @@ window.addEventListener('load', function() {
     buscador.addEventListener('input', function(){
         aviso.innerText= '';
 
-    })
-
-    let queryString = location.search 
-    let queryStringToObject = new URLSearchParams(queryString); 
-    let id = queryStringToObject.get('id');
-
-    //para peliculas
-
-    let urlDetGenero = //link `https://link/${id}`;
-
-    fetch(urlDetGenero)
-        .then( function(response){
-            return response.json();
-        })
-        .then(function(data){
-            console.log(data);
-
-            let genero = document.querySelector('.pag'); 
-            genero.innerText += data.name;
-        
-            let foto = document.querySelector(".fotoaa");
-            foto.src = data.picture_medium;
-
-
-            let urlGeneros2 = //link
-            fetch(urlGeneros2)
-            .then(function(response){
-                return response.json()
-
-                })
-                .then(function(data){
-                    let info = data.data;
-                    console.log(info);
-                    let generosPageContainer= document.querySelector('.contenedorgral');
-                    let contenidoGenerosPage= '';
-
-                    for(let i=0; i<info.length; i++){
-
-                        contenidoGenerosPage +=  `<article class="caja2"> 
-                                                    <li class="chic"> 
-                                                    <a href="./detail-artist.html?id=${info[i].id}" class="names">${info[i].name}</a> 
-                                                    <a href="./detail-artist.html?id=${info[i].id}"><img class="fotos" src="${info[i].picture_medium}"></img></a> 
-                                                    </li>
-                                                </article>`
-                                                    
-                            
-                    }
-
-
-                    generosPageContainer.innerHTML += contenidoGenerosPage;
-                
-                    })
-            
-
-        .catch(function(error){
-            console.log(error);
-        })  })
 })
+
+let queryString = location.search 
+let queryStringToObject = new URLSearchParams(queryString); 
+let id = queryStringToObject.get('id');
+
+//para peliculas
+let urlGeneros2 = "https://api.themoviedb.org/3/genre/movie/list?api_key=385115c8e9bd0bc996d46c69d38601de&language=en-US"
+    fetch(urlGeneros2)
+    .then(function(response){
+        return response.json()
+
+        })
+
+    .then (function(data){
+        console.log(data);
+        let bContainer= document.querySelector('.contenedorgral');
+        let contenidoT= 
+            `<article>
+            <h2>${data.genres.name}</h2>
+            <a href="> 
+            </article>`;
+
+
+            generosPageContainer.innerHTML += contenidoGenerosPage;
+        
+            })
+    
+
+.catch(function(error){
+    console.log(error);
+})  })
+
