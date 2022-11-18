@@ -17,8 +17,14 @@ window.addEventListener('load', function() {
 
     })
 
+let qsString = location.search
+let qs2 = new URLSearchParams(qsString)
+//qs2 = {id= 43270}
+let pepe = qs2.get("id")
+console.log(pepe);
 
-let urldetmov = `https://api.themoviedb.org/3/movie/${movie_id}?api_key=385115c8e9bd0bc996d46c69d38601de&language=en-US`
+
+let urldetmov = `https://api.themoviedb.org/3/movie/${pepe}?api_key=385115c8e9bd0bc996d46c69d38601de&language=en-US`
 
 
 fetch(urldetmov)
@@ -27,25 +33,13 @@ fetch(urldetmov)
     })
     .then (function(data){
         console.log(data);
-        let info = data.results
+        
         let bContainer= document.querySelector('.detmovie1');
         let contenidoT= '';
-
-    for(let i=0; i<info.length; i++){
-            contenidoT +=
-            `<article class="foto">
-            <a href="./detail_movie.html?id=${info[i].id }">
-            <img  class="foto" src="https://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="">
-            <h4>${info[i].title} </h4>
-            <h6<${info[i].release_date} </h6>
-            </a>
-            </article>`
-    
-        }
       
+    
+       bContainer.innerHTML += contenidoT
     }
-       , bContainer.innerHTML += contenidoT
-    ,
         )
     .catch(function(error){
         console.log(error);

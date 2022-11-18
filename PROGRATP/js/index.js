@@ -47,7 +47,7 @@ fetch(url1)
 })
 
 //latest
-let url2 = "https://api.themoviedb.org/3/movie/{movie_id}?api_key=385115c8e9bd0bc996d46c69d38601de&language=en-US"
+let url2 = "https://api.themoviedb.org/3/movie/latest?api_key=385115c8e9bd0bc996d46c69d38601de&language=en-US"
 fetch(url2)
     .then(function(response){
         return response.json()

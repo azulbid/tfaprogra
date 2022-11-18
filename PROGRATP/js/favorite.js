@@ -18,4 +18,4 @@ window.addEventListener('load', function() {
     })
 })
 
-//completar
+// COMPLETAR
