@@ -18,6 +18,7 @@ window.addEventListener('load', function() {
     })
 })
 
+<<<<<<< HEAD
 //completar
 
 //lista de favoritos
@@ -65,3 +66,6 @@ function buscarYMostrarFavoritos (movie_detail){
 
 
 }
+=======
+// COMPLETAR
+>>>>>>> d5639e25da37e8f690efb9c2a28e1e104aa4b188

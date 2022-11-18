@@ -17,34 +17,30 @@ window.addEventListener('load', function() {
 
     })
 
+let qsString = location.search
+let qs2 = new URLSearchParams(qsString)
+//qs2 = {id= 43270}
+let pepe = qs2.get("id")
+console.log(pepe);
 
-let url1 = "https://api.themoviedb.org/3/movie/popular?api_key=385115c8e9bd0bc996d46c69d38601de&language=en-US&page=1"
-// let url1= `https://api.themoviedb.org/3/review/${movie_detail}?api_key=e3f1ae8bae04c04c63af7b6996decd02`
 
-fetch(url1)
+let urldetmov = `https://api.themoviedb.org/3/movie/${pepe}?api_key=385115c8e9bd0bc996d46c69d38601de&language=en-US`
+
+
+fetch(urldetmov)
     .then(function(response){
         return response.json()
     })
-    .then(function(data){
+    .then (function(data){
         console.log(data);
-        let info = data.results
-        let tContainer= document.querySelector('.contenedorgral');
+        
+        let bContainer= document.querySelector('.detmovie1');
         let contenidoT= '';
-
-    
-        //se crea la info con un for
-    for(let i=0; i<info.length; i++){
-        contenidoT +=
-        <ul class="caja"> 
-        <a href="./detail_movie.html?id=${info[i].id }">
-        <img class="foto" src="https://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="imagen"> 
-        </a> 
-        <a href="./detail_movie.html"class="names">${info[i].title}</a>  
-        <a href=".detail_movie.html"></a> 
-        <a>"class="names" ${info[i].title}</a> 
-        </ul>
       
+    
+       bContainer.innerHTML += contenidoT
     }
+<<<<<<< HEAD
 {(        tContainer.innerHTML += contenidoT
     })
     .catch(function(error){
@@ -93,3 +89,10 @@ let personajesFavoritosToString= JSON.stringify(favoritos);
 localStorage.setItem("favoritos", personajesFavoritosToString);
 console.log(localStorage);
 })
+=======
+        )
+    .catch(function(error){
+        console.log(error);
+    })
+})
+>>>>>>> d5639e25da37e8f690efb9c2a28e1e104aa4b188

@@ -45,7 +45,9 @@ fetch(ruta)
         let generos = data.genres
         let seccion = document.querySelector(".contenedorgen1");
         for (let i = 0; i < generos.length; i++) {
-            seccion.innerHTML += `<article class="generos"> <a href="./detail-generes.html?id=${generos[i].id}"> ${generos[i].name}</a> </article>`
+            seccion.innerHTML += `<article class="generos"> 
+            <a href="./detail-generes.html?id=${generos[i].id}"> ${generos[i].name}</a> 
+            </article>`
 
         }}
 
