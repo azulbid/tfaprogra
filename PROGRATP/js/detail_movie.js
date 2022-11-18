@@ -45,10 +45,51 @@ fetch(url1)
         </ul>
       
     }
-        tContainer.innerHTML += contenidoT
+{(        tContainer.innerHTML += contenidoT
     })
     .catch(function(error){
         console.log(error);
     })  
  
+})
+  
+  
+let favoritos=[];
+
+
+let storageRecuperado= localStorage.getItem(".favoritos");
+
+    if (storageRecuperado != null){
+    
+    favoritos= JSON.parse(storageRecuperado);
+    console.log(favoritos);
+    }
+
+let link = document.querySelector(".clave");
+
+    if (favoritos.includes(id)){
+        link.innerText="sacar de favoritos"
+    };
+    console.log(link);
+
+link.addEventListener("click", function(e){
+    e.preventDefault();
+
+    if (favoritos.includes(id)){
+
+        let indice=favoritos.indexOf(id);
+
+        favoritos.splice(indice, 1)
+
+        link.innerText="agregar a favoritos";
+    }
+    
+    else{
+        favoritos.push(id);
+        console.log(favoritos)
+        link.innerText="sacar de favoritos"
+    };
+let personajesFavoritosToString= JSON.stringify(favoritos);
+localStorage.setItem("favoritos", personajesFavoritosToString);
+console.log(localStorage);
 })
