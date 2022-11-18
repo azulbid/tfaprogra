@@ -10,8 +10,39 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     
 </head>
+<header>
+            <div class="titulogo">
+                <img class="logo" src="./img_home/AFT logo.png" alt="AFTlogo">
+                <h1>AFTmovies</h1>
+            </div>
+        
+            <div class="nav">
+                <ul class="list_nav">
+        
+                    <li class="home">
+                    <a href="index.html">Home</a>
+                    </li>
+                    <li class="generos">
+                    <a href="genres.html">Géneros</a>
+                    </li>
+                    <li class="fav">
+                    <a href="favorite.html">Favoritos</a>
+                    </li>
+        
+                </ul>
+            </div>                        
+            <div class="buscador">
+                <form action="./search_results.html" method="GET" class="buscador" id="buscarterm">
+                    <input type="text" value="" name="search" placeholder="Película o serie a buscar">
+                    <button class="lupa" id="search" type="submit"><img src="./imagenes-detail/icone-loupe-noir.png" class="lupa-icon">
+                    <p class ="aviso"></p>
+                    </button>
+                </form>                          
+            </div>
+        </header>
 <body>
-    <div class="contenedorgral">
+    <section class="contdetserie">
+        </section>
       <!--  <header>
             <div class="titulogo">
                 <img class="logo" src="./img_home/AFT logo.png" alt="AFTlogo">
@@ -54,29 +85,29 @@
             <h2 class="titulos">
                 <a href="detail_movie.html" class ="barratexto">Detalle de Serie</a></h2>
                 <ul class="listapeliculas"></ul>  -->
-        </section>
             
             
         </main>
-       
-        <footer>
-            <div class="foot">
-                <img class="logofoot" src="./img_home/AFT logo.png" alt="AFTlogo">
-                <ul class="li_foot">
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="./genres.html">Géneros</a></li>
-                    <li><a href="./favorite.html">Favoritos</a></li>
-                </ul>
-                <ul class="li_foot">
-                    <li class="item_foot" ><a href="./pag_footer.html">Contacto</a></li>
-                    <li class="item_foot" ><a href="./pag_footer.html">Ayuda</a></li>
-                    <li class="item_foot" ><a href="./pag_footer.html">Términos y Condiciones de Uso</a></li>
-                </ul>
-            </div>
-        </footer>
+
     </div>
 <script src="js/detail_serie.js"></script>
 </body>
+<footer>
+    <div class="foot">
+        <img class="logofoot" src="./img_home/AFT logo.png" alt="AFTlogo">
+        <ul class="li_foot">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./genres.html">Géneros</a></li>
+            <li><a href="./favorite.html">Favoritos</a></li>
+        </ul>
+        <ul class="li_foot">
+            <li class="item_foot" ><a href="./pag_footer.html">Contacto</a></li>
+            <li class="item_foot" ><a href="./pag_footer.html">Ayuda</a></li>
+            <li class="item_foot" ><a href="./pag_footer.html">Términos y Condiciones de Uso</a></li>
+        </ul>
+    </div>
+</footer>
+
 </html>
 <!--<!DOCTYPE html>
 <html lang="en">

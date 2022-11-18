@@ -27,25 +27,24 @@ fetch(url1)
     })
     .then(function(data){console.log(data);
         let info = data.results
-        let tContainer= document.querySelector('.contenedorgral');
+        let tContainer= document.querySelector('.contdetserie');
         let contenidoT= '';
 
     for(let i=0; i<info.length; i++){
         contenidoT +=
-        <ul class="caja">        
-        <a href="./detail_movie.html?id=${info[i].id }">
-        <img class="foto" src="https://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="imagen"> </img>
-        </a> 
-        <a href="./detail_movie.html"class="names">${info[i].title}</a>  
-        <a href=".detail_movie.html"></a> 
-        "class="names">${info[i].title} </a> 
-        
-        
-      
+        `<article class="fav uno">
+        <a href="./detail_serie.html?id=${info[i].id }">
+        <img  class="foto" src="https://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="">
+        <h4>${info[i].title} </h4>
+        <h6<${info[i].release_date} </h6>
+        </a>
+        </article>`
+
     }
         tContainer.innerHTML += contenidoT
     })
     .catch(function(error){
         console.log(error);
     })  
+
 })
