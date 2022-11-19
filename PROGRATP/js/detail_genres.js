@@ -15,61 +15,86 @@ window.addEventListener('load', function() {
     buscador.addEventListener('input', function(){
         aviso.innerText= '';
 
-    })
-
-    let queryString = location.search 
-    let queryStringToObject = new URLSearchParams(queryString); 
-    let id = queryStringToObject.get('id');
-
-    //para peliculas
-
-    let urlDetGenero = //link `https://link/${id}`;
-
-    fetch(urlDetGenero)
-        .then( function(response){
-            return response.json();
-        })
-        .then(function(data){
-            console.log(data);
-
-            let genero = document.querySelector('.pag'); 
-            genero.innerText += data.name;
-        
-            let foto = document.querySelector(".fotoaa");
-            foto.src = data.picture_medium;
-
-
-            let urlGeneros2 = //link
-            fetch(urlGeneros2)
-            .then(function(response){
-                return response.json()
-
-                })
-                .then(function(data){
-                    let info = data.data;
-                    console.log(info);
-                    let generosPageContainer= document.querySelector('.contenedorgral');
-                    let contenidoGenerosPage= '';
-
-                    for(let i=0; i<info.length; i++){
-
-                        contenidoGenerosPage +=  `<article class="caja2"> 
-                                                    <li class="chic"> 
-                                                    <a href="./detail-artist.html?id=${info[i].id}" class="names">${info[i].name}</a> 
-                                                    <a href="./detail-artist.html?id=${info[i].id}"><img class="fotos" src="${info[i].picture_medium}"></img></a> 
-                                                    </li>
-                                                </article>`
-                                                    
-                            
-                    }
-
-
-                    generosPageContainer.innerHTML += contenidoGenerosPage;
-                
-                    })
-            
-
-        .catch(function(error){
-            console.log(error);
-        })  })
 })
+
+let queryString = location.search 
+let queryStringToObject = new URLSearchParams(queryString); 
+let id = queryStringToObject.get('id');
+
+//PARA PELICULAS
+let urlGeneros = `https://api.themoviedb.org/3/discover/movie?api_key=385115c8e9bd0bc996d46c69d38601de&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=${id}&with_watch_monetization_types=flatrate`
+    fetch(urlGeneros)
+    .then(function(response){
+        return response.json()
+
+        })
+
+    .then (function(data){
+        console.log(data);
+        let generoApi = data.results
+        let bContainer= document.querySelector('.contenedorgral');
+        let contenidoT= ''
+        for (let i =0 ; i<5; i++){
+            contenidoT +=
+            `<article class="myArticles">
+            <a href="detalle-genero.html?id=${generoApi[i].id}">
+            <div class="bloque-item-lista">
+                <h1 id="tituloGenero" class="titulopelis">${generoApi[i].original_title}</h1>
+                <img id="imagenPelicula" class="imagenes" src="https://image.tmdb.org/t/p/w500${generoApi[i].poster_path}" alt="foto1">
+                <p id="textoPelicula" class="texto"> ${generoApi[i].overview}</p>
+                <p class="estreno">${generoApi[i].release_date} </p>
+            </div>
+             </a>
+            </article>`
+            
+        }
+        console.log(contenidoT);
+        bContainer.innerHTML = contenidoT
+    
+    })
+        
+            })
+    
+
+    .catch(function(error){
+        console.log(error);
+    })  
+
+//PARA SERIES
+
+let urlGeneros = `https://api.themoviedb.org/3/discover/movie?api_key=385115c8e9bd0bc996d46c69d38601de&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=${id}&with_watch_monetization_types=flatrate`
+    fetch(urlGeneros)
+    .then(function(response){
+        return response.json()
+
+        })
+
+    .then (function(data){
+        console.log(data);
+        let generoApi = data.results
+        let bContainer= document.querySelector('.contenedorgral');
+        let contenidoT= ''
+        for (let i =0 ; i<5; i++){
+            contenidoT +=
+            `<article class="myArticles">
+            <a href="detalle-genero.html?id=${generoApi[i].id}">
+            <div class="bloque-item-lista">
+                <h1 id="tituloGenero" class="titulopelis">${generoApi[i].original_title}</h1>
+                <img id="imagenPelicula" class="imagenes" src="https://image.tmdb.org/t/p/w500${generoApi[i].poster_path}" alt="foto1">
+                <p id="textoPelicula" class="texto"> ${generoApi[i].overview}</p>
+                <p class="estreno">${generoApi[i].release_date} </p>
+            </div>
+             </a>
+            </article>`
+            
+        }
+        console.log(contenidoT);
+        bContainer.innerHTML = contenidoT
+    
+    })
+        
+
+
+    .catch(function(error){
+        console.log(error);
+    })  

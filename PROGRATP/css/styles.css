@@ -352,10 +352,12 @@ p {
 }
 
     
-
+img {
+    align-content: center;
+}
     
     
-.titular img { 
+.titular { 
     width: 29vw;
     height: 76vh;
         
@@ -697,6 +699,9 @@ ul.footlist {
 
     h4 {
         font-weight: 70;
+        color: aliceblue;
+        justify-content: center;
+
     }
 
     .vistohoy {

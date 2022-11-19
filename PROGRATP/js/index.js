@@ -46,8 +46,8 @@ fetch(url1)
 
 })
 
-//latest
-let url2 = "https://api.themoviedb.org/3/movie/latest?api_key=385115c8e9bd0bc996d46c69d38601de&language=en-US"
+//upcoming
+let url2 = "https://api.themoviedb.org/3/movie/now_playing?api_key=385115c8e9bd0bc996d46c69d38601de&language=en-US&page=1"
 fetch(url2)
     .then(function(response){
         return response.json()
@@ -164,7 +164,7 @@ fetch(url5)
 
 
 //popular
-let url7 = "https://api.themoviedb.org/3/tv/latest?api_key=385115c8e9bd0bc996d46c69d38601de&language=en-US"
+let url7 = "https://api.themoviedb.org/3/tv/top_rated?api_key=385115c8e9bd0bc996d46c69d38601de&language=en-US&page=1"
 fetch(url7)
     .then(function(response){
         return response.json()
