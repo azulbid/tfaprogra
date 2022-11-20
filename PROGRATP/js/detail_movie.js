@@ -56,30 +56,33 @@ fetch(urldetmov)
   
   
 
+    let queryString = location.search; //Obtengo la QS
+    let queryStringToObject = new URLSearchParams(queryString); //La trasnformo en OL
+    let ids= queryStringToObject.get('id'); //Obtengo los datos de una propiedad con get(
 
 let favoritos=[];
 
 
-let storageRecuperado= localStorage.getItem(".favoritos");
+let storageRecuperado= localStorage.getItem('.favoritos');
     if (storageRecuperado != null){
     
     favoritos= JSON.parse(storageRecuperado);
     console.log(favoritos);
     }
 
-let link = document.querySelector(".clave");
+let link = document.querySelector('.clave');
 
-    if (favoritos.includes(id)){
+    if (favoritos.includes(ids)){
         link.innerText="sacar de favoritos"
     };
     console.log(link);
 
-link.addEventListener("click", function(e){
+link.addEventListener('click', function(e){
     e.preventDefault();
 
-    if (favoritos.includes(id)){
+    if (favoritos.includes(ids)){
 
-        let indice=favoritos.indexOf(id);
+        let indice=favoritos.indexOf(ids);
 
         favoritos.splice(indice, 1)
 
@@ -87,7 +90,7 @@ link.addEventListener("click", function(e){
     }
     
     else{
-        favoritos.push(id);
+        favoritos.push(ids);
         console.log(favoritos)
         link.innerText="sacar de favoritos"
     };
