@@ -54,50 +54,58 @@ fetch(urldetmov)
  
 
   
-  
-
-    let queryString = location.search; //Obtengo la QS
-    let queryStringToObject = new URLSearchParams(queryString); //La trasnformo en OL
-    let ids= queryStringToObject.get('id'); //Obtengo los datos de una propiedad con get(
-
-let favoritos=[];
+// favoritos
+ let favoritos=[]
 
 
-let storageRecuperado= localStorage.getItem('.favoritos');
+//  si ya hay favoritos
+
+let storageRecuperado= localStorage.getItem('pelisfavs');
+
     if (storageRecuperado != null){
     
-    favoritos= JSON.parse(storageRecuperado);
-    console.log(favoritos);
+        favoritos= JSON.parse(storageRecuperado);
+       console.log(favoritos);
     }
 
-let link = document.querySelector('.clave');
 
-    if (favoritos.includes(ids)){
-        link.innerText="sacar de favoritos"
-    };
-    console.log(link);
+let boton= document.querySelector('button');   
 
-link.addEventListener('click', function(e){
-    e.preventDefault();
+//si el id esta en el array cambiamos el texto del boton
+if (favoritos.includes(id)){
+     boton.innerText="sacar de favoritos"
+     };
 
-    if (favoritos.includes(ids)){
 
-        let indice=favoritos.indexOf(ids);
+boton.addEventListener('click', function(){
+    console.log('ok')
+ 
 
-        favoritos.splice(indice, 1)
+    // chequear si el id ya esta lista y cambiar el texto del boton
 
-        link.innerText="agregar a favoritos";
+    if (favoritos.includes(id)){
+        let indicepelicula=favoritos.indexOf(id);
+        favoritos.splice(indicepelicula, 1)
+        boton.innerText="agregar a favoritos favoritos"; 
+    } else{
+    // guardar el id del personaje en el array
+    favoritos.push(id);
+    boton.innerText= 'quitar de favoritos';
     }
-    
-    else{
-        favoritos.push(ids);
-        console.log(favoritos)
-        link.innerText="sacar de favoritos"
-    };
-let personajesFavoritosToString= JSON.stringify(favoritos);
-localStorage.setItem("favoritos", personajesFavoritosToString);
-console.log(localStorage);
+  
+
+    // Guardar datos en local storage
+    let favsTostring = JSON.stringify(favoritos)
+    localStorage.setItem('pelisfavs', favsTostring)
+
+    console.log(localStorage);
+
+
+
+
+
+
 })
 
  
-})
+ })
