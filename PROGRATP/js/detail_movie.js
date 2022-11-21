@@ -75,51 +75,40 @@ fetch(urldetmov)
 })   
  */ 
 // favoritos
- let favoritos=[]
-
+let favoritos=[]
 
 //  si ya hay favoritos
 
-let storageRecuperado=  localStorage.getItem('pelisfavs');
-
+let storageRecuperado = localStorage.getItem('pelisfavs');
     if (storageRecuperado != null){
-    
         favoritos = JSON.parse(storageRecuperado);
-       console.log(favoritos);
+        console.log(favoritos);
     }
-
-
-let boton= document.querySelector('.botoncito');   
+let boton = document.querySelector('.botoncito');   
 
 //si el id esta en el array cambiamos el texto del boton
 if (favoritos.includes(id)){
      boton.innerText="sacar de favoritos"
-     };
-
+    };
 
 boton.addEventListener('click', function(){
-     
- 
-
     // chequear si el id ya esta lista y cambiar el texto del boton
 
     if (favoritos.includes(id)){
-        let indicepelicula=favoritos.indexOf(id);
-        favoritos.splice(indicepelicula, 1)
+        let indicePelicula = favoritos.indexOf(id);
+        favoritos.splice(indicePelicula, 1)
         boton.innerText="agregar a favoritos favoritos"; 
     } else{
-    // guardar el id del personaje en el array
-    favoritos.push(id);
-    boton.innerText= 'quitar de favoritos';
+    // guardar el id de pelicula en el array
+        favoritos.push(id);
+        boton.innerText= 'quitar de favoritos';
     }
   
-
     // Guardar datos en local storage
     let favsTostring = JSON.stringify(favoritos)
     localStorage.setItem('pelisfavs', favsTostring)
     console.log(localStorage);
-
-})
+});
 
  
- })
+})
