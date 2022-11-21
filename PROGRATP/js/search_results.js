@@ -43,8 +43,6 @@ fetch(url)
                 </article>`
             }
         }
-        
-
     })
     .catch(function (error) {
         console.log(error)

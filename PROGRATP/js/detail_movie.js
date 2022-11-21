@@ -25,6 +25,8 @@ console.log(id);
 
 
 let urldetmov = `https://api.themoviedb.org/3/movie/${id}?api_key=385115c8e9bd0bc996d46c69d38601de&language=en-US`
+let urlplatf = `https://api.themoviedb.org/3/movie/${id}/watch/providers?api_key=385115c8e9bd0bc996d46c69d38601de`
+
 
 
 fetch(urldetmov)
@@ -52,8 +54,26 @@ fetch(urldetmov)
         console.log(error);
  })   
  
+/*
+ .then(function(response){
+     return response.json()
+ })
+ .then (function(data){
+     console.log(data);
+     let bContainer= document.querySelector('.detmovie1');
+     let contenidoT= 
+     `<article>
+     <h4> Plataforma: ${data.provider_id} <h4/>
+     </article>`;
+//crear seccion con boton netflix
 
-  
+    bContainer.innerHTML += contenidoT
+ })
+
+ .catch(function(error){
+     console.log(error);
+})   
+ */ 
 // favoritos
  let favoritos=[]
 
