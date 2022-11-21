@@ -21,3 +21,45 @@ window.addEventListener('load', function() {
 
 
 
+
+
+
+//favoritos
+
+let storageRecuperado=localStorage.getItem('pelisfavs')
+
+let peliculas= JSON.parse(storageRecuperado);
+console.log(peliculas)
+
+let lista= document.querySelector(".pelisfavs")
+
+if (peliculas==null|| peliculas.length==0 ){
+    lista.innerHTML = `<p>No hay favoritos seleccionados</p<`
+}else{
+    for (let i= 0; i<peliculas.length; i++){
+    buscarymostrarfavoritos(peliculas[i])
+}
+}
+
+
+function buscarymostrarfavoritos(id){
+    
+let urldetmov = `https://api.themoviedb.org/3/movie/${id}?api_key=385115c8e9bd0bc996d46c69d38601de&language=en-US`
+
+fetch(urldetmov)
+    .then(function(res){
+     return res.json()
+})
+.then(function(data){
+    console.log(data);
+    lista.innerHTML+=`<article>
+    <img src="https://image.tmdb.org/t/p/w500/${data.poster_path}" alt="">
+    <h2>${data.title}</h2>
+    </article>` 
+
+})
+
+.catch(function(error){
+    console.log(error);
+})
+}

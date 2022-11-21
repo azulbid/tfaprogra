@@ -80,16 +80,16 @@ fetch(urldetmov)
 
 //  si ya hay favoritos
 
-let storageRecuperado= localStorage.getItem('pelisfavs');
+let storageRecuperado=  localStorage.getItem('pelisfavs');
 
     if (storageRecuperado != null){
     
-        favoritos= JSON.parse(storageRecuperado);
+        favoritos = JSON.parse(storageRecuperado);
        console.log(favoritos);
     }
 
 
-let boton= document.querySelector('button');   
+let boton= document.querySelector('.botoncito');   
 
 //si el id esta en el array cambiamos el texto del boton
 if (favoritos.includes(id)){
@@ -98,7 +98,7 @@ if (favoritos.includes(id)){
 
 
 boton.addEventListener('click', function(){
-    console.log('ok')
+     
  
 
     // chequear si el id ya esta lista y cambiar el texto del boton
@@ -117,13 +117,7 @@ boton.addEventListener('click', function(){
     // Guardar datos en local storage
     let favsTostring = JSON.stringify(favoritos)
     localStorage.setItem('pelisfavs', favsTostring)
-
     console.log(localStorage);
-
-
-
-
-
 
 })
 
