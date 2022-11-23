@@ -37,7 +37,7 @@ let urlGeneros = `https://api.themoviedb.org/3/discover/movie?api_key=385115c8e9
         for (let i =0 ; i<5; i++){
             contenidoT +=
             `<article class="myArticles">
-            <a href="detalle-genero.html?id=${generoApi[i].id}">
+            <a href="./detalle-genero.html?id=${generoApi[i].id}">
             <div class="bloque-item-lista">
                 <h1 id="tituloGenero" class="titulopelis">${generoApi[i].original_title}</h1>
                 <img id="imagenPelicula" class="imagenes" src="https://image.tmdb.org/t/p/w500${generoApi[i].poster_path}" alt="foto1">
