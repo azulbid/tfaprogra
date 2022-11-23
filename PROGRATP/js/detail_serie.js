@@ -33,7 +33,7 @@ fetch(url)
         console.log(data);
         let bContainer= document.querySelector('.contdetserie');
         let contenidoT= 
-        `<article>
+        `<article>  
         <h2>${data.name}</h2>
         <img src="https://image.tmdb.org/t/p/w500/${data.poster_path}" alt="">
         <h4> Estreno: ${data.first_air_date} </h4>
@@ -83,7 +83,7 @@ boton.addEventListener('click', function(){
     if (favoritos.includes(id)){
         let indicepelicula=favoritos.indexOf(id);
         favoritos.splice(indicepelicula, 1)
-        boton.innerText="agregar a favoritos favoritos"; 
+        boton.innerText="agregar a favoritos "; 
     } else{
     // guardar el id del personaje en el array
     favoritos.push(id);
