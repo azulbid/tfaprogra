@@ -25,8 +25,6 @@ console.log(id);
 
 
 let urldetmov = `https://api.themoviedb.org/3/movie/${id}?api_key=385115c8e9bd0bc996d46c69d38601de&language=en-US`
-let urlplatf = `https://api.themoviedb.org/3/movie/${id}/watch/providers?api_key=385115c8e9bd0bc996d46c69d38601de`
-
 
 
 fetch(urldetmov)

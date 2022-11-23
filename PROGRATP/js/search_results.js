@@ -1,20 +1,6 @@
-/*window.addEventListener('load', function() {
-    let formulario = document.querySelector('form');
-    let buscador = document.querySelector('[name="search"]'); 
-    let aviso = document.querySelector('.aviso')
-    formulario.addEventListener('submit', function(e){
-        e.preventDefault();
-        if( buscador.value === ""){
-            aviso.innerText = 'El buscador está vacío';
-        } else {
-            this.submit();
-        }*/
-
-
-// falta darle formato 
-let query = location.search; //location search es toda la url de la pag la guardas en la variable query 
+let query = location.search;
 let stringToObject = new URLSearchParams(query); //metes esa variable en el metodo, te devuelve todas las urls de la pag
-let aBuscar = stringToObject.get('search'); // agarras search 
+let aBuscar = stringToObject.get('search'); 
 let urlm = `https://api.themoviedb.org/3/search/movie?api_key=385115c8e9bd0bc996d46c69d38601de&language=en-US&query=${aBuscar}&page=1&include_adult=false`
 let urls = `https://api.themoviedb.org/3/tv/?api_key=385115c8e9bd0bc996d46c69d38601de&language=en-US&query=${aBuscar}&page=1&include_adult=false`
 
