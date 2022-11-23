@@ -53,27 +53,8 @@ fetch(urldetmov)
     .catch(function(error){
         console.log(error);
  })   
- 
-/*
- .then(function(response){
-     return response.json()
- })
- .then (function(data){
-     console.log(data);
-     let bContainer= document.querySelector('.detmovie1');
-     let contenidoT= 
-     `<article>
-     <h4> Plataforma: ${data.provider_id} <h4/>
-     </article>`;
-//crear seccion con boton netflix
-
-    bContainer.innerHTML += contenidoT
- })
-
- .catch(function(error){
-     console.log(error);
-})   
- */ 
+  
+  
 // favoritos
 let favoritos=[]
 
